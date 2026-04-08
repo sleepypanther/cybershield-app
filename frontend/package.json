@@ -1,0 +1,24 @@
+{
+  "name": "cybershield-stack",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "install:backend": "npm --prefix backend install",
+    "install:frontend": "npm --prefix frontend install",
+    "desktop:dev": "node scripts/tauri-dev.mjs",
+    "desktop:prepare": "node scripts/tauri-build.mjs",
+    "desktop:build": "npm run desktop:prepare && npm run tauri:build",
+    "bundle:backend": "node scripts/bundle-backend.mjs",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.10.1",
+    "@yao-pkg/pkg": "^6.14.1"
+  }
+}
