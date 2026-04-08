@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top, rgba(255, 231, 236, 0.2), transparent 28%),
+    linear-gradient(135deg, #12071f 0%, #31154f 26%, #244788 52%, #94509b 76%, #f5b76b 100%);
+  color: white;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.romantic-gradient {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 167, 197, 0.32), transparent 22%),
+    radial-gradient(circle at 82% 16%, rgba(146, 196, 255, 0.24), transparent 24%),
+    radial-gradient(circle at 50% 85%, rgba(255, 223, 158, 0.24), transparent 24%),
+    linear-gradient(135deg, rgba(23, 8, 40, 0.96) 0%, rgba(62, 22, 102, 0.88) 30%, rgba(39, 61, 123, 0.84) 58%, rgba(152, 80, 146, 0.84) 78%, rgba(247, 190, 108, 0.76) 100%);
+}
+
+.aurora-overlay {
+  background:
+    radial-gradient(circle at 16% 26%, rgba(255, 255, 255, 0.13), transparent 0 14%),
+    radial-gradient(circle at 74% 24%, rgba(255, 255, 255, 0.08), transparent 0 12%),
+    radial-gradient(circle at 45% 76%, rgba(255, 255, 255, 0.08), transparent 0 16%);
+  animation: auroraDrift 16s ease-in-out infinite alternate;
+}
+
+.glass-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06)),
+    rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+@keyframes auroraDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-2%, 2%, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(2%, -2%, 0) scale(1.08);
+  }
+}
